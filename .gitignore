@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments and secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Jupyter and tooling
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local datasets and generated checkpoints
+TinyImageNet100_2026/
+data/
+*.pth
+*.pt
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
