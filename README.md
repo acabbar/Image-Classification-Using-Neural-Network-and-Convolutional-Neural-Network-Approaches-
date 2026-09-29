@@ -25,7 +25,7 @@ The experiment selects 15 fixed TinyImageNet100 classes so every method is evalu
 - Training augmentation: random horizontal flips and rotations
 - Separate preprocessing pipelines for the MLP, scratch CNN, and pretrained ResNet18
 
-TinyImageNet100 is not stored in this repository. Obtain the dataset separately and update the dataset path in the notebook before running it. Verify the dataset licence and redistribution terms with its original provider.
+TinyImageNet100 is not stored in this repository. Obtain the dataset separately, place it at `data/TinyImageNet100_2026`, or update the configurable dataset path in the notebook. Verify the dataset licence and redistribution terms with its original provider.
 
 ## Models
 
@@ -55,12 +55,12 @@ Images are resized to 224 x 224 and normalized with the standard pretrained ResN
 
 | File | Purpose |
 |---|---|
-| Code-CV Project 2.ipynb | Full data preparation, training, evaluation, plots, and interpretation |
-| model_nn_checkpoint.pth | Saved fully connected network checkpoint |
-| model_cnn_checkpoint.pth | Saved scratch-CNN checkpoint |
-| Report-CV Project 2.pdf | Original project report; review before public reuse because it may contain coursework-specific metadata |
+| `tinyimagenet_model_comparison.ipynb` | Full data preparation, training, evaluation, plots, and interpretation |
+| `model_nn_checkpoint.pth` | Saved fully connected network checkpoint |
+| `model_cnn_checkpoint.pth` | Saved scratch-CNN checkpoint |
+| `Report-CV Project 2.pdf` | Original project report retained as part of the project history |
 
-The notebook also writes model_resnet_checkpoint.pth when the complete workflow is run, but that checkpoint is not currently included in the repository.
+The notebook also writes `model_resnet_checkpoint.pth` when the complete workflow is run, but that checkpoint is not currently included in the repository.
 
 ## Run locally
 
@@ -69,7 +69,7 @@ The notebook also writes model_resnet_checkpoint.pth when the complete workflow 
     pip install -r requirements.txt
     jupyter lab
 
-On macOS or Linux, activate the environment with source .venv/bin/activate. Open the notebook and replace its hard-coded TinyImageNet100 path with the location of your local dataset before running the cells.
+On macOS or Linux, activate the environment with `source .venv/bin/activate`. Open `tinyimagenet_model_comparison.ipynb` and confirm that its dataset path points to your local TinyImageNet100 directory before running the cells.
 
 ## Limitations
 
@@ -78,7 +78,6 @@ On macOS or Linux, activate the environment with source .venv/bin/activate. Open
 - Training accuracy is recorded, but no independent validation split is used for model selection.
 - The handcrafted baseline figures are imported from the related feature-engineering experiment rather than recomputed in this notebook.
 - Results depend on pretrained weights, stochastic augmentation, hardware, and library versions.
-- The current notebook contains a machine-specific dataset path that must be edited before reuse.
 
 ## Key takeaway
 
